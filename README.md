@@ -1,1 +1,1 @@
-# hackathon2021-anomalydetection
+# Hackathon 2021: Anomaly Detection Problem
