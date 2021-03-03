@@ -1,4 +1,4 @@
-# Hackathon 2021: Anomaly Detection Problem
+# Hackathon 2021: Anomaly Detection on Telenor network data
 
 ## Scope:
 The aim is to perform __Unsupervised Anomaly Detection__ on a __Radio Access Network (RAN)__ dataset shared by a Telenor Business Unit, with  the possibility of leveraging the information on the position of the base stations.
@@ -13,8 +13,8 @@ This is particularly important in the Telecom context because anomalies, mostly 
 ## Data
 
 The data that will be shared from Telenor concerns:
-- Hourly aggregated RAN technical counters coming from 403 cells belonging to 31 different base stations
-- Relative distance matrix of the cells.
+- `radio_kpis.csv`: hourly aggregated RAN technical counters coming from 403 cells belonging to 31 different base stations
+- `distance_matrix.csv`: relative distance matrix of the cells.
 
 ### Data Counters
 
@@ -40,7 +40,7 @@ All counters are normalised.
 |`ho_failure_rate`|double|handover failure rate (inter-, intra- frequency, inter-,intra-technology)|
 
 The cell name is a string of numbers and digits that have a particular meaning, corresponding to the hierarchical structure of the base station.
-- **_Base stations_** - also called **_sites_** -  beam radio signals to a 360° area around them.
+- **_Base stations_** - also called **_sites_** -  beam signals to a 360° area around them.
 - Each site is divided into three **_sectors_** covering an area of 120°.
 - Multiple **_cells_** belong to each sector, each running at a prescribed frequency. Cells in the  same sector running on the same frequency are identified by their **_carrier number_**.  The numbering corresponds  to their installation order.
 
@@ -67,7 +67,7 @@ Keeping in mind this structure above, the `cell_name` is of the form `'XX_ija'`,
 
 
 
-## Row sample in CSV format
+## Row sample in CSV format of the `radio_kpis.csv` dataset
 ```csv
 timestamp,cell_name,avail_period_duration,bandwidth,num_voice_attempts,num_data_attempts,voice_failure_rate,data_failure_rate,unavail_unplan_rate,unavail_total_rate,voice_setup_failure_rate,voice_drop_rate,data_setup_failure_rate,data_drop_rate,thp_rate_tt_kpi,ho_failure_rate
 2020-09-09 13:00:00+00:00,00_11Z,1.0,1.0,0.160213,0.128572,0.4,0.018830,0.0,0.348986,0.5,0.5,0.052767,0.003127,7.125096e-05,0.335624
