@@ -1,4 +1,4 @@
-# Hackathon 2021: Anomaly Detection on Telenor network data
+# Hackathon 2021: _"Anomaly Detection on Telenor network data"_
 
 ## Scope:
 The aim is to perform __Unsupervised Anomaly Detection__ on a __Radio Access Network (RAN)__ dataset shared by a Telenor Business Unit, with  the possibility of leveraging the information on the position of the base stations.
