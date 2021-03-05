@@ -69,14 +69,16 @@ Keeping in mind this structure above, the `cell_name` is of the form `'XX_ija'`,
 
 ## Row sample in CSV format of the `radio_kpis.csv` dataset
 ```csv
-timestamp,cell_name,avail_period_duration,bandwidth,num_voice_attempts,num_data_attempts,voice_failure_rate,data_failure_rate,unavail_unplan_rate,unavail_total_rate,voice_setup_failure_rate,voice_drop_rate,data_setup_failure_rate,data_drop_rate,thp_rate_tt_kpi,ho_failure_rate
-2020-09-09 13:00:00+00:00,00_11Z,1.0,1.0,0.160213,0.128572,0.4,0.018830,0.0,0.348986,0.5,0.5,0.052767,0.003127,7.125096e-05,0.335624
-2020-04-13 09:00:00+00:00,01_31Z,1.0,1.00000,0.025367,0.054606,0.4,0.018782,0.0,0.348986,0.5,0.5,0.052632,0.003128,0.000088,0.333333
-2020-08-24 17:00:00+00:00,00_32Z,1.0,1.00000,0.008011,0.019009,0.4,0.018782,0.0,0.348986,0.5,0.5,0.052632,0.003128,0.000136,0.333333
-2020-06-22 05:00:00+00:00,02_31X,1.0,0.49975,0.013351,0.039680,0.4,0.019254,0.0,0.348986,0.5,0.5,0.053073,0.003448,0.000070,0.339683
-2020-08-26 19:00:00+00:00,03_31Y,1.0,0.49975,0.004005,0.006780,0.4,0.018782,0.0,0.348986,0.5,0.5,0.052632,0.003128,0.000099,0.333333
-
+cell_name,timestamp,avail_period_duration,bandwidth,num_voice_attempts,num_data_attempts,voice_failure_rate,data_failure_rate,unavail_unplan_rate,unavail_total_rate,voice_setup_failure_rate,voice_drop_rate,data_setup_failure_rate,data_drop_rate,thp_rate_tt_kpi,ho_failure_rate
+02_21Y,2019-12-31 23:00:00+00:00,1.0,0.49975,0.001335,0.012488,0.0,0.000000,0.0,0.348986,0.0,0.0,0.000000,0.000000,0.000098,0.333333
+11_31Y,2019-12-31 23:00:00+00:00,1.0,0.49975,0.028037,0.049471,0.0,0.000772,0.0,0.348986,0.0,0.0,0.000373,0.000644,0.000054,0.334979
+25_21X,2019-12-31 23:00:00+00:00,1.0,0.49975,0.000000,0.000000,NaN,NaN,0.0,0.348986,NaN,NaN,NaN,NaN,NaN,NaN
+00_22Z,2019-12-31 23:00:00+00:00,1.0,1.00000,0.005340,0.011638,0.0,0.000000,0.0,0.348986,0.0,0.0,0.000000,0.000000,0.000084,0.333333
+11_21Z,2019-12-31 23:00:00+00:00,1.0,1.00000,0.148198,0.070752,0.0,0.001529,0.0,0.348986,0.0,0.0,0.000261,0.001442,0.000074,0.336182
 ```
-
+### Comments:
+-  `Nan` values indicate that when calculating the rate, the denominator was 0. (e.g. `data drop rate`:`NaN` means that there have been no data attempts)
+-  Very low throughput indicates an anomaly (the resource allocated per user is too low to satisfy the user's needs)
+-  High number of data/voice attempts is also indicationof an anomaly
 
 
