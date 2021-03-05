@@ -50,7 +50,7 @@ There are two types of cells:
 
 
 Keeping in mind this structure above, the `cell_name` is of the form `'XX_ija'`, where:
-* `XX` in `{00,01,02,..,30}` and denotes the site the cell belongs to;
+* `XX` in `{00,01,02,..,30}` denotes the site the cell belongs to;
 * `i` in `{1,2,3}` denotes the sector  the cell belongs to;
 * `j` in `{1,2,...}` denotes the carrier;
 * `a` in `{'Z','X','Y','W','V','R','Q'}` denotes the technology and frequency of the cell based on the table below.
@@ -79,6 +79,6 @@ cell_name,timestamp,avail_period_duration,bandwidth,num_voice_attempts,num_data_
 ### Comments:
 -  `Nan` values indicate that when calculating the rate, the denominator was 0. (e.g. `data drop rate`:`NaN` means that there have been no data attempts)
 -  Very low throughput indicates an anomaly (the resource allocated per user is too low to satisfy the user's needs)
--  High number of data/voice attempts is also indicationof an anomaly
+-  High number of data/voice attempts is also indication of an anomaly (some parameter misconfiguration is occurring)
 
 
