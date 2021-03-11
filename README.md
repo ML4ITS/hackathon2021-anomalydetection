@@ -59,7 +59,7 @@ Keeping in mind this structure above, the `cell_name` is of the form `'XX_ija'`,
 * `XX` in `{00,01,02,..,30}` denotes the site the cell belongs to;
 * `i` in `{1,2,3}` denotes the sector  the cell belongs to;
 * `j` in `{1,2,...}` denotes the carrier;
-* `a` in `{'Z','X','Y','W','V','R','Q'}` denotes the technology and frequency of the cell based on the table below.
+* `a` in `{'Z','X','Y','W','V','R','Q','P'}` denotes the technology and frequency of the cell based on the table below.
 
 |key|technology|frequency|
 |---|----------|---------|
