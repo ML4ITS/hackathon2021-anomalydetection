@@ -83,7 +83,7 @@ cell_name,timestamp,avail_period_duration,bandwidth,num_voice_attempts,num_data_
 11_21Z,2019-12-31 23:00:00+00:00,1.0,1.00000,0.148198,0.070752,0.0,0.001529,0.0,0.348986,0.0,0.0,0.000261,0.001442,0.000074,0.336182
 ```
 ### Comments:
--  `Nan` values indicate that when calculating the rate, the denominator was 0. (e.g. `data drop rate`:`NaN` means that there have been no data attempts)
+-  `Nan` values could derive from the fact that when calculating the rate, the denominator was 0. (e.g. `data drop rate`:`NaN` means that there have been no data attempts), or could be an indication of the cell being unavailable and not able to record signals, or simply missing values in the data due to technical reasons.
 -  Very low throughput indicates an anomaly (the resource allocated per user is too low to satisfy the user's needs)
 -  High number of data/voice attempts is also indication of an anomaly (some parameter misconfiguration is occurring)
 
