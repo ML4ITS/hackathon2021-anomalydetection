@@ -9,7 +9,11 @@ The aim is to perform __Unsupervised Anomaly Detection__ on a __Radio Access Net
 In the Telecom domain, efficient and accurate Anomaly  Detection is vital to be able to continuously monitor the network’s base stations’ key metrics and alert for possible incidents in time. With constant upgrades in the network infrastructure, the coming of 5G and the exponential increase of devices and antennas, it is unfeasible to carry out such detection without relying on data-driven models that automate this task.
 
 Most commonly, the anomalies to be detected do not concern single measurements but come from systems recording several counters, that  is, generating multivariate time series. The difficulty in detecting anomalies in multivariate time series arises from the fact that the contexts and the correlations between the different  features, time windows and neighbouring base stations have to be taken into account and examined. 
-This is particularly important in the Telecom context because anomalies, mostly corresponding to failures in the network or misconfiguration of the parameters’ settings,  are especially hard to recognise as they are not easily distinguishable from  the “normal” behaviour.
+There are two main types of anomalies that are desirable to detect: 
+1) __point anomalies__ 
+2) __trend anomalies__ 
+The latter, corresponding to misconfigurations/failures in the network, are especially hard to recognise, as they are not easily distinguishable from  the “normal” behaviour, hence, leveraging the correlations between the time series components and the topological information is particularly important.
+
 
 ## Data
 
@@ -58,14 +62,14 @@ Keeping in mind this structure above, the `cell_name` is of the form `'XX_ija'`,
 
 |key|technology|frequency|
 |---|----------|---------|
-|`'Z'`|4G|2600MHz|
-|`'X'`|4G|1800MHz|
-|`'Y'`|4G|2100MHz|
-|`'W'`|4G|800MHz|
-|`'V'`|2G|900MHz|
-|`'R'`|3G|2100MHz|
-|`'Q'`|3G|900MHz|
-
+|`'Z'`|4G|2100MHz|
+|`'X'`|4G|800MHz|
+|`'Y'`|2G|900MHz|
+|`'W'`|4G|2600MHz|
+|`'V'`|3G|900MHz|
+|`'R'`|4G|1800MHz|
+|`'Q'`|3G|2100MHz|
+|`'P'`|2G|1800MHz|
 
 
 ## Row sample in CSV format of the `radio_kpis.csv` dataset
