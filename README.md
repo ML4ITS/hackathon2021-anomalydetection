@@ -12,6 +12,7 @@ Most commonly, the anomalies to be detected do not concern single measurements b
 There are two main types of anomalies that are desirable to detect: 
 1) __point anomalies__ 
 2) __trend anomalies__ 
+
 The latter, corresponding to misconfigurations/failures in the network, are especially hard to recognise, as they are not easily distinguishable from  the “normal” behaviour, hence, leveraging the correlations between the time series components and the topological information is particularly important.
 
 
